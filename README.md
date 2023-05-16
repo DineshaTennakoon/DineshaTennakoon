@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @DineshaTennakoon
-- 👀 I’m interested in web development
+- 👀 I’m interested in web development----------
 - 🌱 I’m currently learning HTML,CSS,PHP,JS,AJAX,BOOSTRAP
 - 💞️ I’m looking to collaborate on projects
 - 📫 How to reach me dineshathennakoon8@gmail.com
