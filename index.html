@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dinesha Thennakoon — Modern Animated Portfolio</title>
+  <meta name="description" content="Interactive and animated portfolio of Dinesha Thennakoon — skills, projects, achievements, education, and contact info." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f13;
+      --card:#0f1720;
+      --muted:#94a3b8;
+      --accent:#8b5cf6;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      --shadow: 0 12px 40px rgba(2,6,23,0.7);
+      --radius:16px;
+      --maxw:1200px;
+      --transition:all 0.4s ease;
+    }
+    *{box-sizing:border-box; margin:0; padding:0;}
+    html,body{height:100%;font-family:'Inter', system-ui,sans-serif;background:var(--bg);color:#e6eef8;-webkit-font-smoothing:antialiased;line-height:1.5;padding:24px;transition:var(--transition);}
+    .container{max-width:var(--maxw);margin:0 auto;}
+    header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;margin-bottom:32px;background:rgba(255,255,255,0.02);backdrop-filter:blur(8px);border-radius:var(--radius);box-shadow:var(--shadow);transition:var(--transition);}
+    .brand{display:flex;align-items:center;gap:16px;}
+    .logo{width:64px;height:64px;border-radius:50%;overflow:hidden;box-shadow:0 10px 30px rgba(139,92,246,0.2);transition:transform 0.4s;}
+    .logo:hover{transform:scale(1.1) rotate(5deg);}
+    .logo img{width:100%;height:100%;object-fit:cover;display:block;}
+    .brand h1{font-size:18px;margin-bottom:2px;}
+    .brand p{font-size:13px;color:var(--muted);}
+    nav{display:flex;gap:16px;align-items:center;}
+    nav a{padding:10px 14px;border-radius:12px;font-size:14px;text-decoration:none;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:var(--transition);}
+    nav a:hover{background:var(--glass);color:#fff;transform:translateY(-2px);}
+    main{display:grid;gap:36px;}
+
+    .hero{display:flex;flex-wrap:wrap;gap:32px;padding:48px;border-radius:var(--radius);background:rgba(255,255,255,0.02);box-shadow:var(--shadow);animation:fadeInUp 1s ease forwards;}
+    .hero-left{flex:1;min-width:300px;animation:slideInLeft 1s ease forwards;opacity:0;}
+    .hero-right{flex-shrink:0;width:280px;height:280px;border-radius:var(--radius);overflow:hidden;animation:slideInRight 1s ease forwards;opacity:0;}
+    .hero-right img{width:100%;height:100%;object-fit:cover;}
+    .title{font-size:32px;font-weight:700;margin-bottom:12px;animation:textGlow 2s ease-in-out infinite alternate;}
+    .subtitle{font-size:16px;color:var(--muted);margin-bottom:16px;opacity:0;animation:fadeIn 1.2s ease forwards;animation-delay:0.2s;}
+    .panel{padding:28px;border-radius:var(--radius);background:rgba(255,255,255,0.01);backdrop-filter:blur(6px);box-shadow:var(--shadow);transition:var(--transition);}
+    .panel:hover{transform:translateY(-4px);}
+    .section{display:grid;gap:18px;}
+    .section h2{font-size:22px;margin-bottom:12px;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:4px;}
+    .about p{color:var(--muted);font-size:15px;}
+    .skills{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;}
+    .skill{position:relative;padding:12px 16px;border-radius:16px;background:var(--glass);color:#fff;font-weight:600;overflow:hidden;transition:transform 0.3s;}
+    .skill:hover{transform:scale(1.05);}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+    .project{padding:18px;border-radius:var(--radius);background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);box-shadow:var(--shadow);transition:transform 0.3s, box-shadow 0.3s;}
+    .project:hover{transform:translateY(-5px);box-shadow:0 15px 45px rgba(139,92,246,0.3);}
+    .project h3{font-size:16px;margin-bottom:8px;}
+    .project p{font-size:14px;color:var(--muted);}
+    .project a{margin-top:10px;display:inline-block;text-decoration:none;color:var(--accent);font-weight:600;}
+    .contact-card{display:flex;flex-direction:column;gap:12px;padding:18px;border-radius:var(--radius);background:rgba(255,255,255,0.02);}
+    .contact-card a{color:var(--accent);text-decoration:none;word-break:break-word;}
+    @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+    @keyframes slideInLeft{0%{opacity:0;transform:translateX(-40px);}100%{opacity:1;transform:translateX(0);}}
+    @keyframes slideInRight{0%{opacity:0;transform:translateX(40px);}100%{opacity:1;transform:translateX(0);}}
+    @keyframes fadeInUp{0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
+    @keyframes textGlow{0%{text-shadow:0 0 4px rgba(139,92,246,0.3);}100%{text-shadow:0 0 16px rgba(139,92,246,0.6);}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+          <h1>Dinesha Thennakoon</h1>
+          <p>Senior Software Developer</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero panel">
+        <div class="hero-left">
+          <div class="title">Hi — I'm <strong>Dinesha</strong></div>
+          <div class="subtitle">Professional with expertise in both technical and non-technical roles. Experienced in management, operations, client relations, and team leadership.</div>
+        </div>
+        <div class="hero-right avatar">
+          <img src="https://avatars.githubusercontent.com/u/129361319?s=400&u=642825b23a025249293e1d9201948d828ff38172&v=4" alt="Dinesha Thennakoon">
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="panel section">
+        <h2>About Me</h2>
+        <p>I am a senior software developer with extensive experience in software development, project management, and non-technical roles including operations and client management.</p>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="panel section">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill">Project Management</div>
+          <div class="skill">Client Relations</div>
+          <div class="skill">Team Leadership</div>
+          <div class="skill">Communication</div>
+          <div class="skill">Problem Solving</div>
+          <div class="skill">Time Management</div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="panel section">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project">
+            <h3>Binary Prediction on Rain Fall Dataset</h3>
+            <a href="https://github.com/DineshaTennakoon/RainFallDataset" target="_blank">View on GitHub</a>
+          </div>
+           <div class="project">
+            <h3>Food Ordering System</h3>
+            <a href="https://github.com/DineshaTennakoon/Food-Ordering-System" target="_blank">View on GitHub</a>
+          </div>
+           <div class="project">
+            <h3>Cab Booking System</h3>
+            <a href="https://github.com/DineshaTennakoon/MegaCityCabNew" target="_blank">View on GitHub</a>
+          </div>
+           <div class="project">
+            <h3>Smart Agriculture System</h3>
+            <p>AI-Powered Smart Agriculture System with Dual-Mode (Online/Offline) IoT Sensing, Disease Detection for Sri Lankan Farmers</p>
+            <a href="https://github.com/DineshaTennakoon/SmartAgriConnect" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+      </section>
+        <section id="contact" class="panel section">
+        <h2>Contact</h2>
+        <div class="contact-card">
+          <p>Phone: <a href="tel:0764573228">0764573228</a></p>
+          <p>Email: <a href="mailto:dineshathennakoon8@gmail.com">dineshathennakoon8@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/dinesha-thennakoon-a15687199" target="_blank">linkedin.com/in/dinesha-thennakoon-a15687199</a></p>
+          <p>GitHub: <a href="https://github.com/DineshaTennakoon" target="_blank">github.com/DineshaTennakoon</a></p>
+        </div>
+      </section>
